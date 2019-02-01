@@ -1,3 +1,98 @@
-<p>
-  login works!
-</p>
+<mat-card class="login-container">
+
+	<mat-tab-group class="tabs" [selectedIndex]="0" #group>
+
+		<mat-tab label="login-tab">
+
+			<!-- Header -->
+			<h2>
+				Log in with your account
+			</h2>
+
+			<div class="error hidden" #loginError>
+				unauthorised
+			</div>
+
+			<!-- Login form -->
+			<mat-card-content>
+				<form class="login-form">
+
+					<!-- Email -->
+					<mat-form-field class="full-width">
+						<input matInput placeholder="Email" value="">
+					</mat-form-field>		
+
+					<!-- Password -->
+					<mat-form-field class="full-width">
+						<input matInput type="password" placeholder="Password" value="">
+					</mat-form-field>
+					
+				</form>
+			</mat-card-content>
+
+ 			<mat-card-actions>
+
+				<!-- Actions -->
+				<div class="login-actions">
+					<a (click)="forgot()">I forgot my password.</a>
+					<a>Not a user? Register.</a>
+				</div>
+
+				<!-- Login -->
+				<button mat-flat-button (click)="login()">Log In</button>
+				
+			</mat-card-actions>
+
+		</mat-tab>
+
+		<mat-tab label="forgot-tab">
+
+			<!-- Header -->
+			<h2>
+				Enter your email address to reset your password.
+			</h2>
+			<h3>
+				We'll send you a link to reset your password.
+			</h3>
+
+			<mat-card-content>
+				<mat-form-field class="full-width">
+					<input matInput placeholder="Email" value="">
+				</mat-form-field>
+			</mat-card-content>
+
+
+			<mat-card-actions>
+
+				<!-- Login -->
+				<button mat-flat-button (click)="submit()">Submit</button>
+
+				<!-- Login -->
+				<button mat-flat-button (click)="cancel()">Cancel</button>
+				
+			</mat-card-actions>
+
+		</mat-tab>
+
+		<mat-tab label="success-tab">
+
+				<!-- Header -->
+				<h2>
+					Please check your inbox.
+				</h2>
+				<h3>
+					An email with instructions to reset your password was just sent to you.
+				</h3>
+
+			<mat-card-actions>
+
+				<!-- Login -->
+				<button mat-flat-button (click)="back()" class="center-button">Back to Login</button>
+				
+			</mat-card-actions>
+
+		</mat-tab>
+
+	</mat-tab-group>
+
+</mat-card>

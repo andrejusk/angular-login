@@ -1,0 +1,72 @@
+.login-container
+
+    overflow: hidden
+
+    margin: auto
+    max-width: 600px
+
+    background-color: #fff
+
+    padding: 1.5rem
+
+    h2, h3
+        margin: 0 0 1rem 0
+        text-align: center
+
+/* Hide login */
+.error
+    text-align: center
+    padding: 2rem
+    background-color: #fffafa
+    color: #f76c6c
+
+    &.hidden
+        height: 0px
+        padding: 0
+        opacity: 0
+    
+::ng-deep .tabs
+    /* Hide header */
+    .mat-tab-list .mat-tab-labels 
+        display: none
+
+    /* Hide border */
+    .mat-tab-header
+        border-bottom: none
+
+
+.full-width
+    width: 100%
+
+
+
+.mat-card-actions
+    margin: 0
+    display: flex
+
+.login-actions
+
+    width: 66.67%
+    display: inline
+    margin: 0
+
+    a
+        margin: 0 0 0.25rem 0
+        display: block
+
+        color: #a098c0
+
+button
+    flex: 0 0 200px
+    display: inline
+
+    color: #fff
+    background-color: #1cd777
+    border-radius: 2px
+
+
+mat-card-actions
+    justify-content: space-between
+
+.center-button
+    margin: auto
