@@ -12,6 +12,9 @@ export class LoginComponent implements OnInit {
   @ViewChild('loginError') loginError: ElementRef;
   @ViewChild('forgotError') forgotError: ElementRef;
 
+  @ViewChild('emailLogin') emailLogin: ElementRef;
+  @ViewChild('emailForgot') emailForgot: ElementRef;
+
   constructor() { }
 
   ngOnInit() { }
@@ -21,10 +24,13 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    
     this.loginError.nativeElement.classList = "error"
   }
 
   forgot() {
+    this.emailForgot.nativeElement.value = 
+      this.emailLogin.nativeElement.value
     this.navigateTo(1)
   }
 
